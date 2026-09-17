@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - CS Student</title>
+    <title>Aidan Smith - Computer Science Student</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Zalando+Sans+Expanded:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
@@ -253,13 +253,13 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 4rem;
-            align-items: start;
+            align-items: center;
         }
 
         .about-right {
             position: relative;
-            width: 100%;
-            height: 100%;
+            width: 80%;
+            height: 80%;
             border-radius: 12px;
             overflow: hidden;
         }
@@ -314,6 +314,71 @@
             font-size: 1.1rem;
             line-height: 1.8;
             margin-bottom: 1.5rem;
+        }
+
+        .experience-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .experience-card {
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 2rem;
+            transition: border-color 0.2s;
+        }
+
+        .experience-card:hover {
+            border-color: var(--accent);
+        }
+
+        .experience-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 0.25rem;
+        }
+
+        .experience-header h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .experience-date {
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+
+        .experience-company {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 1.25rem;
+            font-style: italic;
+        }
+
+        .experience-card ul {
+            list-style: none;
+        }
+
+        .experience-card li {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 0.6rem;
+            padding-left: 1.3rem;
+            position: relative;
+            line-height: 1.6;
+        }
+
+        .experience-card li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
         }
 
         .skills-list {
@@ -528,6 +593,7 @@
             nav ul.active li:nth-child(2) { transition-delay: 0.2s; }
             nav ul.active li:nth-child(3) { transition-delay: 0.3s; }
             nav ul.active li:nth-child(4) { transition-delay: 0.4s; }
+            nav ul.active li:nth-child(5) { transition-delay: 0.5s; }
 
             nav a {
                 font-size: 1.2rem;
@@ -565,6 +631,7 @@
             </div>
             <ul>
                 <li><a href="#about">ABOUT</a></li>
+                <li><a href="#experience">EXPERIENCE</a></li>
                 <li><a href="#skills">SKILLS</a></li>
                 <li><a href="#projects">PROJECTS</a></li>
                 <li><a href="#contact">CONTACT</a></li>
@@ -573,10 +640,10 @@
     </nav>
 
     <section id="home" class="hero-section">
-        <img src="IMG_0634.jpeg" alt="Your Name" class="hero-image">
+        <img src="IMG_0634.jpeg" alt="Aidan Smith" class="hero-image">
         <div class="hero-content">
             <h1><span style="color: var(--accent);">Hi,</span> I am<br>Aidan Smith</h1>
-            <p>Building elegant solutions to complex problems</p>
+            <p>Bridging AI and software engineering with sports and business</p>
             <a href="#contact" class="hero-cta">Get in touch →</a>
         </div>
     </section>
@@ -586,8 +653,8 @@
             <h2>About Me</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>I'm a Computer Science student at [University Name], passionate about creating efficient and scalable software solutions. My focus is on full-stack development, with a strong interest in backend systems and cloud architecture.</p>
-                    <p>Currently seeking internship opportunities where I can apply my technical skills, collaborate with talented teams, and contribute to meaningful projects.</p>
+                    <p>I'm a Computer Science student (Business minor) at Loyola Marymount University, passionate about sports technology and business innovation. I specialize in data science, AI applications, and web application development.</p>
+                    <p>I've applied my technical skills in entrepreneurial and media environments — from co-founding a sports tech startup to writing for a college sports publication — and I'm seeking work that bridges AI and software engineering with the sports and business industries.</p>
                 </div>
                 <div class="about-right">
                     <div class="about-image">
@@ -599,14 +666,70 @@
                             <div class="stat-label">GPA</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">10+</div>
-                            <div class="stat-label">Projects</div>
+                            <div class="stat-number">4+</div>
+                            <div class="stat-label">Experiences</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">2025</div>
-                            <div class="stat-label">Graduation</div>
+                            <div class="stat-number">2028</div>
+                            <div class="stat-label">Class Of</div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="experience-grid">
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Software Engineer Intern</h3>
+                        <span class="experience-date">Dec 2025 - May 2026</span>
+                    </div>
+                    <div class="experience-company">dlvr.it</div>
+                    <ul>
+                        <li>Working with dlvr.it to architect an RSS feed storage and categorization system</li>
+                        <li>Helping develop and optimize the core algorithm for extracting, parsing, and organizing web content by topic</li>
+                        <li>Engineering an efficient JSON storage solution handling thousands of RSS feeds</li>
+                        <li>Collaborating with a professional development team to refine the codebase</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Data Science / AI Research Assistant</h3>
+                        <span class="experience-date">May 2026 - Present</span>
+                    </div>
+                    <div class="experience-company">LMU Summer Undergraduate Research</div>
+                    <ul>
+                        <li>Built a data pipeline to collect and store 60,000+ World Cup related TikTok videos and metadata using the TikTok Research API</li>
+                        <li>Engineered and deployed an automated crawling system on a Linux research server using nohup for background execution and Git for team collaboration</li>
+                        <li>Generated keyword frequency, n-gram, hashtag co-occurrence, and region/language reports to support content analysis research</li>
+                        <li>Leveraged local LLMs for sentiment analysis and geographical clustering of video content</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Entrepreneur / Founding Member</h3>
+                        <span class="experience-date">Feb 2025 - Present</span>
+                    </div>
+                    <div class="experience-company">Elastrike LLC</div>
+                    <ul>
+                        <li>Co-founded a sports technology startup developing innovative boxing training equipment</li>
+                        <li>Leading collaboration with marketing, product design, and finance to drive product development from concept to patent-pending prototype</li>
+                        <li>Creating a fully-functional eStore prototype and project plans for manufacturing, technology use, prototyping, and budgeting</li>
+                    </ul>
+                </div>
+                <div class="experience-card">
+                    <div class="experience-header">
+                        <h3>Sportswriting Intern</h3>
+                        <span class="experience-date">Feb 2026 - May 2026</span>
+                    </div>
+                    <div class="experience-company">Los Angeles Loyolan</div>
+                    <ul>
+                        <li>Conducted interviews with student-athletes and campus sports fans to produce compelling coverage across multiple sports</li>
+                        <li>Researched team performance, statistics, and storylines to deliver timely, engaging articles for the LMU community</li>
+                        <li>Worked in person with editors, photographers, and designers to publish polished content on deadline</li>
+                    </ul>
                 </div>
             </div>
         </section>
@@ -615,28 +738,28 @@
             <h2>Skills</h2>
             <div class="skills-list">
                 <div class="skill-item">
-                    <h3>Python</h3>
-                    <p>Django, Flask, Data Analysis</p>
+                    <h3>Programming Languages</h3>
+                    <p>Python, Java, HTML/CSS, PHP</p>
                 </div>
                 <div class="skill-item">
-                    <h3>JavaScript</h3>
-                    <p>React, Node.js, Express</p>
+                    <h3>AI & Data Science</h3>
+                    <p>Machine Learning, LLMs, Data Analysis</p>
                 </div>
                 <div class="skill-item">
-                    <h3>Java</h3>
-                    <p>Spring Boot, OOP, Algorithms</p>
-                </div>
-                <div class="skill-item">
-                    <h3>Database</h3>
-                    <p>SQL, MongoDB, PostgreSQL</p>
+                    <h3>Web Development</h3>
+                    <p>API Integration, Web Scraping, JSON</p>
                 </div>
                 <div class="skill-item">
                     <h3>Tools</h3>
-                    <p>Git, Docker, AWS, CI/CD</p>
+                    <p>Git, Linux, Microsoft Excel</p>
                 </div>
                 <div class="skill-item">
-                    <h3>Other</h3>
-                    <p>REST APIs, Agile, Testing</p>
+                    <h3>Sports & Business</h3>
+                    <p>Sports Analytics, Business Operations, Media Production</p>
+                </div>
+                <div class="skill-item">
+                    <h3>Coursework</h3>
+                    <p>Data Structures, Algorithms, AI, Linear Algebra</p>
                 </div>
             </div>
         </section>
@@ -687,16 +810,16 @@
             <h2>Let's Connect</h2>
             <p>I'm always interested in hearing about new opportunities, projects, or just having a chat about technology.</p>
             <div class="contact-links">
-                <a href="mailto:your.email@example.com" class="contact-btn primary">Email Me</a>
-                <a href="https://github.com/yourusername" class="contact-btn" target="_blank">GitHub</a>
-                <a href="https://linkedin.com/in/yourprofile" class="contact-btn" target="_blank">LinkedIn</a>
+                <a href="mailto:aidan.harrison.smith@gmail.com" class="contact-btn primary">Email Me</a>
+                <a href="https://github.com/asmith2828" class="contact-btn" target="_blank">GitHub</a>
+                <a href="https://www.linkedin.com/in/aidan-smith-868b91381" class="contact-btn" target="_blank">LinkedIn</a>
                 <a href="your-resume.pdf" class="contact-btn" target="_blank">Resume</a>
             </div>
         </section>
     </div>
 
     <footer>
-        <p>© 2024 Your Name. Designed and built with care.</p>
+        <p>© 2026 Aidan Smith. Designed and built with care.</p>
     </footer>
 
     <script>
