@@ -417,6 +417,9 @@
         }
 
         .project-card {
+            display: block;
+            color: inherit;
+            text-decoration: none;
             border: 1px solid var(--border);
             border-radius: 8px;
             overflow: hidden;
@@ -452,6 +455,14 @@
             color: var(--text-secondary);
             margin-bottom: 1.5rem;
             font-size: 0.95rem;
+        }
+
+        .project-link {
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            color: var(--accent);
+            font-size: 0.9rem;
+            font-weight: 500;
         }
 
         .project-tags {
@@ -767,42 +778,32 @@
         <section id="projects">
             <h2>Featured Projects</h2>
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">🚀</div>
+                <a href="https://fastbreaknba.netlify.app" target="_blank" class="project-card">
+                    <div class="project-image">🏀</div>
                     <div class="project-content">
-                        <h3>Project Title</h3>
-                        <p>A full-stack web application that helps users manage and track their daily tasks with real-time updates and collaborative features.</p>
+                        <h3>FastBreak NBA</h3>
+                        <p>Full-stack NBA player rating and game simulation app modeling 373 active players across 18 statistics, powered by a Python data pipeline pulling live stats from the NBA Stats API.</p>
+                        <div class="project-link">View Live →</div>
                         <div class="project-tags">
                             <span class="tag">React</span>
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">💡</div>
-                    <div class="project-content">
-                        <h3>Another Project</h3>
-                        <p>Machine learning model for predicting stock market trends using historical data and sentiment analysis from financial news.</p>
-                        <div class="project-tags">
                             <span class="tag">Python</span>
-                            <span class="tag">TensorFlow</span>
-                            <span class="tag">API</span>
+                            <span class="tag">NBA Stats API</span>
                         </div>
                     </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">🎯</div>
+                </a>
+                <a href="https://asmithbeats.netlify.app" target="_blank" class="project-card">
+                    <div class="project-image">🎵</div>
                     <div class="project-content">
-                        <h3>Side Project</h3>
-                        <p>Open-source CLI tool that automates development workflows and improves productivity for software engineers.</p>
+                        <h3>AsmithBeats</h3>
+                        <p>An interactive audio player showcasing original beats produced in Logic Pro, built to let visitors browse, preview, and license tracks.</p>
+                        <div class="project-link">View Live →</div>
                         <div class="project-tags">
-                            <span class="tag">Python</span>
-                            <span class="tag">CLI</span>
-                            <span class="tag">Open Source</span>
+                            <span class="tag">JavaScript</span>
+                            <span class="tag">Audio</span>
+                            <span class="tag">Netlify</span>
                         </div>
                     </div>
-                </div>
+                </a>
             </div>
         </section>
 
