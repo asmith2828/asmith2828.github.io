@@ -417,9 +417,6 @@
         }
 
         .project-card {
-            display: block;
-            color: inherit;
-            text-decoration: none;
             border: 1px solid var(--border);
             border-radius: 8px;
             overflow: hidden;
@@ -457,12 +454,26 @@
             font-size: 0.95rem;
         }
 
-        .project-link {
-            display: inline-block;
+        .project-links {
+            display: flex;
+            gap: 1.25rem;
             margin-bottom: 1.5rem;
-            color: var(--accent);
+        }
+
+        .project-link {
+            color: var(--text-secondary);
             font-size: 0.9rem;
             font-weight: 500;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .project-link.primary {
+            color: var(--accent);
+        }
+
+        .project-link:hover {
+            color: var(--text-primary);
         }
 
         .project-tags {
@@ -778,32 +789,38 @@
         <section id="projects">
             <h2>Featured Projects</h2>
             <div class="projects-grid">
-                <a href="https://fastbreaknba.netlify.app" target="_blank" class="project-card">
+                <div class="project-card">
                     <div class="project-image">🏀</div>
                     <div class="project-content">
                         <h3>FastBreak NBA</h3>
                         <p>Full-stack NBA player rating and game simulation app modeling 373 active players across 18 statistics, powered by a Python data pipeline pulling live stats from the NBA Stats API.</p>
-                        <div class="project-link">View Live →</div>
+                        <div class="project-links">
+                            <a href="https://fastbreaknba.netlify.app" target="_blank" class="project-link primary">View Live →</a>
+                            <a href="https://github.com/asmith2828/NBA-sim-2026" target="_blank" class="project-link">View Code →</a>
+                        </div>
                         <div class="project-tags">
                             <span class="tag">React</span>
                             <span class="tag">Python</span>
                             <span class="tag">NBA Stats API</span>
                         </div>
                     </div>
-                </a>
-                <a href="https://asmithbeats.netlify.app" target="_blank" class="project-card">
+                </div>
+                <div class="project-card">
                     <div class="project-image">🎵</div>
                     <div class="project-content">
                         <h3>AsmithBeats</h3>
                         <p>An interactive audio player showcasing original beats produced in Logic Pro, built to let visitors browse, preview, and license tracks.</p>
-                        <div class="project-link">View Live →</div>
+                        <div class="project-links">
+                            <a href="https://asmithbeats.netlify.app" target="_blank" class="project-link primary">View Live →</a>
+                            <a href="https://github.com/asmith2828/asmithbeats" target="_blank" class="project-link">View Code →</a>
+                        </div>
                         <div class="project-tags">
                             <span class="tag">JavaScript</span>
                             <span class="tag">Audio</span>
                             <span class="tag">Netlify</span>
                         </div>
                     </div>
-                </a>
+                </div>
             </div>
         </section>
 
